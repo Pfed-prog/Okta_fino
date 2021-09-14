@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Values</th>
+        <th>Prediction</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for key, claim in data.items() %}
+    <tr>
+        <td>{{ key }}</td>
+        <td id="claim-{{ key }}">
+            {{ claim }}
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
